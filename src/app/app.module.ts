@@ -4,19 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { PhrasesListComponent } from './phrases-list/phrases-list.component';
-import { PhraseDetailsComponent } from './phrase-details/phrase-details.component';
+import { PhrasesListComponent } from './phrases/phrases-list/phrases-list.component';
+import { PhraseDetailsComponent } from './phrases/phrase-details/phrase-details.component';
+import { PhrasesModule } from './phrases/phrases.module';
+import { AdminModule } from './admin/admin.module';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PhrasesListComponent,
-    PhraseDetailsComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PhrasesModule,
+    AdminModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

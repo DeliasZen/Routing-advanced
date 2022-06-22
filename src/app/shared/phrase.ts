@@ -1,9 +1,8 @@
 export class Phrase {
-  constructor(    
+  constructor(
     public id: number,
     public value: string,
-    public language: string,
-    ) {
-      
-    }
+    public language: string
+  ) {
+  }
 }

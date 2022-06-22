@@ -1,0 +1,25 @@
+<div>
+  <h3>Selected Phrase Details</h3>
+
+  <div>ID: {{phrase.id}}</div>
+
+  <ng-container *ngIf="authService.isLoggedIn; then isAuth else notIsAuth"></ng-container>
+
+  <div class="btn-group">
+    <button type="button" (click)="gotoPhrasesList()">Go to phrases list</button>
+  </div>
+
+</div>
+
+<ng-template #isAuth>
+  <div>Value: <input [(ngModel)]="editValue" type="text"></div>
+  <div>Language: <input [(ngModel)]="editLanguage" type="text"></div>
+  <div *ngIf="isChanged()" class="inline-btn">
+    <button type="button" (click)="save()">Save</button>
+  </div>
+</ng-template>
+
+<ng-template #notIsAuth>
+  <div>Value: {{phrase.value}}</div>
+  <div>Language: {{phrase.language}}</div>
+</ng-template>
