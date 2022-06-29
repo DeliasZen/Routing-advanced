@@ -1,3 +1,3 @@
 # RoutingAdvanced
 
-https://routing-advanced-ilya.herokuapp.com/phrases
+https://routing-advanced-ilya.herokuapp.com
